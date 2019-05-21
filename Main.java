@@ -34,6 +34,7 @@ public class Main
         }
         if(userNum > misteryNum) {
             System.out.println("Too large");
+            System.out.println("Please enter number from 1 to 10");
             userNum = userInput.nextInt();
                 while (userNum >= 11 || userNum <= 0) {
                     System.out.println("Please enter number from 1 to 10");
@@ -42,6 +43,7 @@ public class Main
         }
         else if(userNum < misteryNum) {
             System.out.println("Too small");
+            System.out.println("Please enter number from 1 to 10");
             userNum = userInput.nextInt();
                 while (userNum >= 11 || userNum <= 0) {
                     System.out.println("Please enter number from 1 to 10");
