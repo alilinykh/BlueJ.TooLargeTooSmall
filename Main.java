@@ -19,20 +19,21 @@ public class Main
     Scanner userInput = new Scanner(System.in);
     Random rand = new Random();
     //create random num
-    int misteryNum  = rand.nextInt(11);
+    int mysteryNum  = rand.nextInt(11);
+    while (mysteryNum == 0) {mysteryNum  = rand.nextInt(11);}
     System.out.println("Please enter number from 1 to 10");
     userNum = userInput.nextInt();
     while (userNum >= 11 || userNum <= 0) {
         System.out.println("Please enter number from 1 to 10");
         userNum = userInput.nextInt();
     }
-    while(userNum != misteryNum) {
+    while(userNum != mysteryNum) {
         
         if (userNum != prevNum) {
             prevNum = userNum;
             counter++;
         }
-        if(userNum > misteryNum) {
+        if(userNum > mysteryNum) {
             System.out.println("Too large");
             System.out.println("Please enter number from 1 to 10");
             userNum = userInput.nextInt();
@@ -41,7 +42,7 @@ public class Main
                     userNum = userInput.nextInt();
                 }
         }
-        else if(userNum < misteryNum) {
+        else if(userNum < mysteryNum) {
             System.out.println("Too small");
             System.out.println("Please enter number from 1 to 10");
             userNum = userInput.nextInt();
